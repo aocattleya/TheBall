@@ -24,4 +24,16 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    // GOボタンを押した
+    public void PushGoButton()
+    {
+        // ボタンの重力を有効化
+        Rigidbody2D rd = ball.GetComponent<Rigidbody2D>();
+        rd.isKinematic = false;
+
+        retryButton.SetActive(true);    // リトライボタンを表示
+        goButton.SetActive(false);      // GOボタンを表示
+        isBallMoving = true;            // ボールは「移動中」
+    }
 }
