@@ -36,4 +36,17 @@ public class GameManager : MonoBehaviour {
         goButton.SetActive(false);      // GOボタンを表示
         isBallMoving = true;            // ボールは「移動中」
     }
+
+    // リトライボタンを押した
+    public void PushRetryButton()
+    {
+        Destroy(ball);                  // ボールオブジェクトを削除
+
+        // プレハブより新しいボールオブジェクトを作成
+        ball = (GameObject)Instantiate(ballPrefab);
+
+        retryButton.SetActive(false);   // リトライボタンを非表示
+        goButton.SetActive(true);       // GOボタンを表示
+        isBallMoving = false;           // ボールは「移動中ではない」
+    }
 }

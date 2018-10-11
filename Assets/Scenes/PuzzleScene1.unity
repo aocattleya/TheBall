@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 219944230}
   m_Layer: 0
   m_Name: OutArea
-  m_TagString: Untagged
+  m_TagString: OutArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 225147622}
   m_Layer: 0
   m_Name: OutArea
-  m_TagString: Untagged
+  m_TagString: OutArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 346768322}
   m_Layer: 0
   m_Name: OutArea
-  m_TagString: Untagged
+  m_TagString: OutArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -558,6 +558,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1275008592905506, guid: f0f18aaa955496c46aee71a9e2816274,
     type: 2}
   m_PrefabInternal: {fileID: 347124096}
+--- !u!114 &347124098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347124097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef90c7b76b04524f8d24ec26e041853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +690,7 @@ GameObject:
   - component: {fileID: 812786497}
   m_Layer: 0
   m_Name: OutArea
-  m_TagString: Untagged
+  m_TagString: OutArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1224,7 +1235,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2016760668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1065335495}
+        m_MethodName: PushRetryButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2016760668
