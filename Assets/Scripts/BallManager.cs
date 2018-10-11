@@ -26,4 +26,15 @@ public class BallManager : MonoBehaviour {
             gameManager.GetComponent<GameManager>().PushRetryButton();
         }
     }
+
+    // ボールが何かのトリガーに衝突
+    void OnTriggerEnter2D (Collider2D other)
+    {
+        if (other.gameObject.tag == "ClearArea")
+        {
+            // 「クリアーエリア」に入った
+            GameObject gameManager = GameObject.Find("GameManager");
+            gameManager.GetComponent<GameManager>().StageClear();
+        }
+    }
 }
