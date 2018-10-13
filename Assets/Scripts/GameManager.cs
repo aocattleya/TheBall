@@ -57,6 +57,12 @@ public class GameManager : MonoBehaviour {
         isBallMoving = false;           // ボールは「移動中ではない」
     }
 
+    // バックボタンを押した
+    public void PushBackButton()
+    {
+
+    }
+
     // ステージクリア処理
     public void StageClear()
     {
