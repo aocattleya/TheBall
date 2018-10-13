@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -60,14 +61,31 @@ public class GameManager : MonoBehaviour {
     // バックボタンを押した
     public void PushBackButton()
     {
-
+        GobackStageSelect();
     }
 
     // ステージクリア処理
     public void StageClear()
     {
         audioSource.PlayOneShot(clearSE);   // クリア音再生
+
+        // セーブデータ更新
+        if(PlayerPrefs.GetInt("CLEAR", 0) < StageNo)
+        {
+            // セーブされているステージNoより今のステージNoが多きければ
+            PlayerPrefs.SetInt("CLEAR", StageNo);
+        }
+
         clearText.SetActive(true);          // クリア表示
         retryButton.SetActive(false);       // リトライボタン非表示
+
+        // 3秒後に自動的にステージセレクト画面へ
+        Invoke("GobackStageSelect", 3.0f);
+    }
+
+    // 移動処理
+    void GobackStageSelect()
+    {
+        SceneManager.LoadScene("StageSelectScene");
     }
 }
