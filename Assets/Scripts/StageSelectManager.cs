@@ -22,14 +22,12 @@ public class StageSelectManager : MonoBehaviour {
             if (clearStageNo < i)
             {
                 b = false;  // 前ステージをクリアしていなければ向こう
-            }
-            else
-            {
+            } else {
                 b = true;   // 前ボタンをクリアしていれば有効
             }
 
             // ボタンの有効／無効を設定
-            stageButtons[i].GetComponent<Button>().interactable = b;
+            stageButtons [i].GetComponent<Button> ().interactable = b;
         }
 		
 	}
