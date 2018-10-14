@@ -27,7 +27,7 @@ public class StageSelectManager : MonoBehaviour {
             }
 
             // ボタンの有効／無効を設定
-            stageButtons [i].GetComponent<Button> ().interactable = b;
+            stageButtons[i].GetComponent<Button>().interactable = b;
         }
 		
 	}

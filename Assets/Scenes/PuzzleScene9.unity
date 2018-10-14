@@ -1510,7 +1510,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1521,7 +1521,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1044151735
 SpriteRenderer:
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5c9d2ee3866e94fb626c46b522d1e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StageNo: 0
+  StageNo: 9
   isBallMoving: 0
   ballPrefab: {fileID: 1275008592905506, guid: f0f18aaa955496c46aee71a9e2816274, type: 2}
   ball: {fileID: 347124097}
